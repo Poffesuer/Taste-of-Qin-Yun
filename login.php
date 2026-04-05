@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require "config/connect.php";
+require "includes/connect.php";
 
 $message = "";
 $messageClass = "message";

@@ -12,7 +12,7 @@
         <a href="index.html">Home</a>
         <a href="menu.html">Menu</a>
         <a href="cart.html">
-            <img src="images/cart.png" class="cart">
+        <img src="images/cart.png" class="cart">
         </a>
     </nav>
     <header>
