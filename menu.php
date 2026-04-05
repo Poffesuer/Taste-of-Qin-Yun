@@ -9,66 +9,80 @@
 <body>
     <nav>
         <p>Resturant</p>
-        <a href="index.html">Home</a>
-        <a href="menu.html">Menu</a>
-        <a href="cart.html">
+        <a href="index.php">Home</a>
+        <a href="menu.php">Menu</a>
+        <a href="cart.php">
             <img src="images/cart.png" class="cart">
         </a>
     </nav>
-    <header>
-        <h1>Our Menu</h1>
-    </header>
-    <main class="layout">
-        <aside class="sidebar">
-            <a href="#">Appetizers</a>
-            <a href="#">Main Courses</a>
-            <a href="#">Desserts</a>
-            <a href="#">Drinks</a>
-        </aside>
+    
+    <main>
+        <section class="menu-top">
+            <img src="images/cart.png" alt="background">
+            <h1>Our Menu</h1>
+        </section>
 
-        <section class="menu">
-            <section class="menu-row">
-                <section class="menu-section">
-                    <h2>Bruschetta - $8</h2>
-                    <p>askjdsaldkjaslkdjdsklaj</p>
-                </section>
-                <section class="menu-section">
-                    <h2>Bruschetta - $8</h2>
-                    <p>askjdsaldkjaslkdjdsklaj</p>
-                </section>
-                <section class="menu-section">
-                    <h2>Bruschetta - $8</h2>
-                    <p>askjdsaldkjaslkdjdsklaj</p>
-                </section>
-            </section>
+        <section class="menu-layout">
+            <aside class="sidebar-left">
+                <a href="#">Appetizers</a>
+                <a href="#">Main Courses</a>
+                <a href="#">Desserts</a>
+                <a href="#">Drinks</a>
+            </aside>
 
-            <section class="menu-row">
-                <section class="menu-section">
-                    <h2>Bruschetta - $8</h2>
-                    <p>askjdsaldkjaslkdjdsklaj</p>
+            <section class="menu">
+                <section class="menu-row">
+                    <section class="menu-section">
+                        <img src="images/cart.png" class="item">
+                        <h2>Bruschetta - $8</h2>
+                        <p>askjdsaldkjaslkdjdsklaj</p>
+                    </section>
+                    <section class="menu-section">
+                        <img src="images/cart.png" class="item">
+                        <h2>Bruschetta - $8</h2>
+                        <p>askjdsaldkjaslkdjdsklaj</p>
+                    </section>
+                    <section class="menu-section">
+                        <img src="images/cart.png" class="item">
+                        <h2>Bruschetta - $8</h2>
+                        <p>askjdsaldkjaslkdjdsklaj</p>
+                    </section>
                 </section>
-                <section class="menu-section">
-                    <h2>Bruschetta - $8</h2>
-                    <p>askjdsaldkjaslkdjdsklaj</p>
-                </section>
-                <section class="menu-section">
-                    <h2>Bruschetta - $8</h2>
-                    <p>askjdsaldkjaslkdjdsklaj</p>
-                </section>
-            </section>
 
-            <section class="menu-row">
-                <section class="menu-section">
-                    <h2>Bruschetta - $8</h2>
-                    <p>askjdsaldkjaslkdjdsklaj</p>
+                <section class="menu-row">
+                    <section class="menu-section">
+                        <img src="images/cart.png" class="item">
+                        <h2>Bruschetta - $8</h2>
+                        <p>askjdsaldkjaslkdjdsklaj</p>
+                    </section>
+                    <section class="menu-section">
+                        <img src="images/cart.png" class="item">
+                        <h2>Bruschetta - $8</h2>
+                        <p>askjdsaldkjaslkdjdsklaj</p>
+                    </section>
+                    <section class="menu-section">
+                        <img src="images/cart.png" class="item">
+                        <h2>Bruschetta - $8</h2>
+                        <p>askjdsaldkjaslkdjdsklaj</p>
+                    </section>
                 </section>
-                <section class="menu-section">
-                    <h2>Bruschetta - $8</h2>
-                    <p>askjdsaldkjaslkdjdsklaj</p>
-                </section>
-                <section class="menu-section">
-                    <h2>Bruschetta - $8</h2>
-                    <p>askjdsaldkjaslkdjdsklaj</p>
+
+                <section class="menu-row">
+                    <section class="menu-section">
+                        <img src="images/cart.png" class="item">
+                        <h2>Bruschetta - $8</h2>
+                        <p>askjdsaldkjaslkdjdsklaj</p>
+                    </section>
+                    <section class="menu-section">
+                        <img src="images/cart.png" class="item">
+                        <h2>Bruschetta - $8</h2>
+                        <p>askjdsaldkjaslkdjdsklaj</p>
+                    </section>
+                    <section class="menu-section">
+                        <img src="images/cart.png" class="item">
+                        <h2>Bruschetta - $8</h2>
+                        <p>askjdsaldkjaslkdjdsklaj</p>
+                    </section>
                 </section>
             </section>
         </section>

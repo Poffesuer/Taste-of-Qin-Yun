@@ -15,14 +15,36 @@
             <img src="images/cart.png" class="cart">
         </a>
     </nav>
-    <header>
-        <h1>Welcome to Our Restaurant</h1>
-    </header>
-    <main class="layout">
-        <div>  
-            <p>Enjoy delicious food in a cozy atmosphere.</p>
-            <p>Check out our menu for a variety of dishes!</p>
-        </div>
-    </main>
+    <section class="home-top">
+        <img src="images/cart.png" alt="background">
+        <h1>Taste Of Qinyun</h1>
+        <h3>Top Items</h3>
+
+        <section class="display">
+            <section class="display-item">
+                <img src="images/cart.png" class="item">
+                <h2>Bruschetta - $8</h2>
+                <p>askjdsaldkjaslkdjdsklaj</p>
+            </section>
+
+            <section class="display-item">
+                <img src="images/cart.png" class="item">
+                <h2>Bruschetta - $8</h2>
+                <p>askjdsaldkjaslkdjdsklaj</p>
+            </section>
+
+            <section class="display-item">
+                <img src="images/cart.png" class="item">
+                <h2>Bruschetta - $8</h2>
+                <p>askjdsaldkjaslkdjdsklaj</p>
+            </section>
+
+            <section class="display-item">
+                <img src="images/cart.png" class="item">
+                <h2>Bruschetta - $8</h2>
+                <p>askjdsaldkjaslkdjdsklaj</p>
+            </section>
+        </section>
+    </section>
 </body>
 </html>
