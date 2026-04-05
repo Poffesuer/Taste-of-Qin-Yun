@@ -1,12 +1,7 @@
 <?php
 session_start();
 
-$pdo = new PDO(
-    "mysql:host=localhost;dbname=li4439_db;charset=utf8mb4",
-    "li4439_local",
-    "nXw>QV.r"
-);
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+require "config/connect.php";
 
 $message = "";
 $messageClass = "message";
@@ -161,7 +156,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login Page</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -273,46 +268,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     </div>
   </main>
 
-  <script>
-    const loginForm = document.getElementById("loginForm");
-    const registerForm = document.getElementById("registerForm");
-    const resetForm = document.getElementById("resetForm");
+  <script src="js/auth.js"></script>
 
-    const showRegister = document.getElementById("showRegister");
-    const showReset = document.getElementById("showReset");
-    const showLoginFromRegister = document.getElementById("showLoginFromRegister");
-    const showLoginFromReset = document.getElementById("showLoginFromReset");
-
-    function hideAllForms() {
-      loginForm.classList.add("hidden");
-      registerForm.classList.add("hidden");
-      resetForm.classList.add("hidden");
-    }
-
-    showRegister.addEventListener("click", function (e) {
-      e.preventDefault();
-      hideAllForms();
-      registerForm.classList.remove("hidden");
-    });
-
-    showReset.addEventListener("click", function (e) {
-      e.preventDefault();
-      hideAllForms();
-      resetForm.classList.remove("hidden");
-    });
-
-    showLoginFromRegister.addEventListener("click", function (e) {
-      e.preventDefault();
-      hideAllForms();
-      loginForm.classList.remove("hidden");
-    });
-
-    showLoginFromReset.addEventListener("click", function (e) {
-      e.preventDefault();
-      hideAllForms();
-      loginForm.classList.remove("hidden");
-    });
-  </script>
 
 </body>
 </html>
