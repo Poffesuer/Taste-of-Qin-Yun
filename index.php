@@ -5,16 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Home</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <p>Resturant</p>
-        <a href="index.php">Home</a>
-        <a href="menu.php">Menu</a>
-        <a href="cart.php">
-            <img src="images/cart.png" class="cart">
-        </a>
-    </nav>
+    <?php include 'includes/header.php'; ?>
+
     <section class="home-top">
         <img src="images/cart.png" alt="background">
         <h1>Taste Of Qinyun</h1>

@@ -5,16 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Menu</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <p>Resturant</p>
-        <a href="index.html">Home</a>
-        <a href="menu.html">Menu</a>
-        <a href="cart.html">
-            <img src="images/cart.png" class="cart">
-        </a>
-    </nav>
+    <?php include 'includes/header.php'; ?>
     
     <main>
         <section class="menu-top">
@@ -31,13 +25,19 @@
             </aside>
 
             <section class="menu">
+
                 <section class="menu-row">
                     <section class="menu-section">
                         <img src="images/cart.png" class="item">
                         <h2>Bruschetta - $8</h2>
                         <p>askjdsaldkjaslkdjdsklaj</p>
+                        <form method="POST" action="cart/add.php">
+                            <input type="hidden" name="id" value = 1>
+                            <input type="hidden" name="price">
+                            <button class="btn" type="submit">Add to Cart</button>
+                        </form>
                     </section>
-                    <section class="menu-section">
+                    <section class="menu-section"> 
                         <img src="images/cart.png" class="item">
                         <h2>Bruschetta - $8</h2>
                         <p>askjdsaldkjaslkdjdsklaj</p>
@@ -84,8 +84,10 @@
                         <p>askjdsaldkjaslkdjdsklaj</p>
                     </section>
                 </section>
+
             </section>
         </section>
     </main>
+
 </body>
 </html>
