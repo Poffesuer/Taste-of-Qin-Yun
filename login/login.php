@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       $message = "Please enter both username and password.";
       $messageClass = "error-message";
     } else {
-      $stmt = $pdo->prepare("SELECT * FROM restaurant WHERE username = ?");
+      $stmt = $pdo->prepare("SELECT * FROM login_details WHERE username = ?");
       $stmt->execute([$username]);
       $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -77,7 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       $message = "Passwords do not match.";
       $messageClass = "error-message";
     } else {
-      $check = $pdo->prepare("SELECT * FROM restaurant WHERE username = ? OR email = ?");
+      $check = $pdo->prepare("SELECT * FROM login_details WHERE username = ? OR email = ?");
       $check->execute([$username, $email]);
       $existing = $check->fetch(PDO::FETCH_ASSOC);
 
@@ -90,7 +90,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $messageClass = "error-message";
       } else {
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-        $insert = $pdo->prepare("INSERT INTO restaurant (email, username, password) VALUES (?, ?, ?)");
+        $insert = $pdo->prepare("INSERT INTO login_details (email, username, password) VALUES (?, ?, ?)");
         $insert->execute([$email, $username, $hashedPassword]);
 
         $_SESSION["user_id"] = $pdo->lastInsertId();
@@ -124,7 +124,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       $message = "New passwords do not match.";
       $messageClass = "error-message";
     } else {
-      $findUser = $pdo->prepare("SELECT * FROM restaurant WHERE email = ?");
+      $findUser = $pdo->prepare("SELECT * FROM login_details WHERE email = ?");
       $findUser->execute([$email]);
       $user = $findUser->fetch(PDO::FETCH_ASSOC);
 
@@ -132,7 +132,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $message = "No account was found with this email.";
         $messageClass = "error-message";
       } else {
-        $checkUsername = $pdo->prepare("SELECT * FROM restaurant WHERE username = ? AND email <> ?");
+        $checkUsername = $pdo->prepare("SELECT * FROM login_details WHERE username = ? AND email <> ?");
         $checkUsername->execute([$newUsername, $email]);
         $usernameExists = $checkUsername->fetch(PDO::FETCH_ASSOC);
 
@@ -141,7 +141,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
           $messageClass = "error-message";
         } else {
           $hashedPassword = password_hash($newPassword, PASSWORD_DEFAULT);
-          $update = $pdo->prepare("UPDATE restaurant SET username = ?, password = ? WHERE email = ?");
+          $update = $pdo->prepare("UPDATE login_details SET username = ?, password = ? WHERE email = ?");
           $update->execute([$newUsername, $hashedPassword, $email]);
 
           $message = "Your username and password have been reset successfully. Please log in.";

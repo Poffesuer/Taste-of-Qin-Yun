@@ -93,7 +93,8 @@ foreach ($cart as $item) {
                 </div>
 
                 <div class="col">
-                    <button class="cart-button big">Purchase</button>
+                    <a href="checkout.php" class="cart-button big"
+                        style="display:inline-block; text-align:center; text-decoration:none; box-sizing: border-box;">Checkout</a>
                     <form method="post" action="clear_cart.php">
                         <button type="submit" class="cart-button">Clear Cart</button>
                     </form>
