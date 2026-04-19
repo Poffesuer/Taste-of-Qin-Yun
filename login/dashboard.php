@@ -9,6 +9,11 @@ if (!isset($_SESSION["user_id"])) {
 $username = $_SESSION["username"];
 $welcomeType = $_SESSION["welcome_type"] ?? "old";
 
+if (!empty($_SESSION["is_admin"])) {
+    header("Location: ../admin/dashboard.php");
+    exit;
+}
+
 if ($welcomeType === "new") {
     $welcomeMessage = "Welcome to our website!";
     $redirectPage = "login.php";
