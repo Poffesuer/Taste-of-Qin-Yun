@@ -22,6 +22,7 @@ if (!$adminRow || empty((int) $adminRow['is_admin'])) {
     exit;
 }
 
+// Performs a bulk data extraction querying all recorded chronological transactions massively
 $ordersStmt = $pdo->query(
     'SELECT order_id, customer_name, email, phone, address, total_price, payment_method, order_status, created_at
      FROM orders
@@ -37,6 +38,7 @@ $orderItemsStmt = $pdo->query(
 $orderItemsRows = $orderItemsStmt->fetchAll(PDO::FETCH_ASSOC);
 $orderItemsByOrderId = [];
 
+// Explicit multidimensional restructuring tracking complex cart inventories per unique ID universally
 foreach ($orderItemsRows as $itemRow) {
     $itemOrderId = (int) ($itemRow['order_id'] ?? 0);
     if (!isset($orderItemsByOrderId[$itemOrderId])) {

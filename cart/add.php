@@ -25,8 +25,10 @@ if ($id === false || !isset($products[$id])) {
     exit;
 }
 
+// Statically maps the targeted REST payload to robust backend dictionaries
 $product = $products[$id];
 
+// Instantiates pristine state containers recursively if none exists
 $_SESSION['cart'] = $_SESSION['cart'] ?? [];
 
 $found = false;

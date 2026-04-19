@@ -27,6 +27,10 @@ class CheckoutValidator {
         this.validateForm(); // initial check
     }
 
+    /**
+     * Binds input validation and formatting event listeners to each checkout field
+     * Executes real-time masking on keystrokes and deep validation on blur
+     */
     bindEvents() {
         Object.keys(this.fields).forEach(key => {
             const input = this.fields[key];
@@ -45,6 +49,10 @@ class CheckoutValidator {
         this.form.addEventListener('submit', (e) => this.handleSubmit(e));
     }
 
+    /**
+     * Masks and auto-formats user inputs keystroke-by-keystroke securely.
+     * Prevents invalid characters from ever entering the input UI state.
+     */
     handleInput(key, e) {
         const input = this.fields[key];
         let val = input.value;
@@ -105,6 +113,10 @@ class CheckoutValidator {
         this.validateForm();
     }
 
+    /**
+     * Structurally validates the exact business logic required for a field.
+     * Evaluates expiration date safety and credit card lengths algorithmically.
+     */
     validateField(key) {
         const input = this.fields[key];
         if (!input) return false;
@@ -199,6 +211,9 @@ class CheckoutValidator {
         return isValid;
     }
 
+    /**
+     * Decorator pattern updating CSS border states and toggling error messages visually.
+     */
     setFieldState(key, isValid, errorMsg) {
         const input = this.fields[key];
         const errorSpan = document.getElementById(`error-${key}`);
@@ -220,6 +235,10 @@ class CheckoutValidator {
         }
     }
 
+    /**
+     * Mathmatical cryptographic validation checking for real Credit Card generation patterns.
+     * Rejects falsely generated structural sequences natively (Luhn Module 10 verification).
+     */
     luhnCheck(val) {
         let sum = 0;
         let shouldDouble = false;

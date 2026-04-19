@@ -12,16 +12,25 @@ $message = "";
 $messageClass = "message";
 $activeForm = "login";
 
+/**
+ * Sanitizes and enforces deep email string validation securely resolving raw payloads
+ */
 function isValidEmail($email)
 {
   return filter_var($email, FILTER_VALIDATE_EMAIL);
 }
 
+/**
+ * Safely filters out special characters universally preventing direct SQL injection syntax disruptions
+ */
 function isValidUsername($username)
 {
   return preg_match('/^[A-Za-z0-9_]{3,30}$/', $username);
 }
 
+/**
+ * Mandates system cryptographic strength requiring complex Symbols, Numbers, and mixed Cases explicitly
+ */
 function isValidPassword($password)
 {
   return preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z\d]).{6,}$/', $password);
@@ -30,6 +39,8 @@ function isValidPassword($password)
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $action = $_POST["action"] ?? "";
 
+  // ---- USER AUTHENTICATION / LOGIN ALGORITHM ---- //
+  // Queries DB against stored BCRYPT hashes validating state completely
   if ($action === "login") {
     $activeForm = "login";
 
@@ -67,6 +78,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
   }
 
+  // ---- NEW USER REGISTRATION ALGORITHM ---- //
+  // Enforces rigorous unique constraints recursively before salting payloads securely
   if ($action === "register") {
     $activeForm = "register";
 

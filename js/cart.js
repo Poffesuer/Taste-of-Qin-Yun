@@ -5,6 +5,7 @@
  */
 document.addEventListener('DOMContentLoaded', () => {
     // AJAX Add to Cart
+    // Intercepts structural submit events natively bypassing standard REST page refreshes securely
     document.querySelectorAll('form[action="cart/add.php"]').forEach(form => {
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
