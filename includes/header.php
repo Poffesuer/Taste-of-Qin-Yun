@@ -1,5 +1,5 @@
 <?php
-$base_url = '/taste-of-qin-yun';
+$base_url = '';
 if (strpos($_SERVER['REQUEST_URI'], '/taste-of-qin-yun') === 0) {
     $base_url = '/taste-of-qin-yun';
 }

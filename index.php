@@ -10,7 +10,7 @@ if (session_status() === PHP_SESSION_NONE) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Home</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=<?php echo time(); ?>">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 </head>
@@ -23,9 +23,9 @@ if (session_status() === PHP_SESSION_NONE) {
         <h1>Taste Of Qinyun</h1>
 
         <section class="display">
-            
+
             <h3>Top Items</h3>
-            
+
             <section class="display-item">
                 <img src="images/cart.png" class="item">
                 <h2>Bruschetta - $8</h2>
