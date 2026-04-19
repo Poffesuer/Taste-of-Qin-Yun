@@ -16,7 +16,7 @@ $products = [
 ];
 
 if ($id === false || !isset($products[$id])) {
-    header("Location: menu.php");
+    echo json_encode(["error" => "Invalid product"]);
     exit;
 }
 
@@ -42,6 +42,11 @@ if (!$found) {
     ];
 }
 
-header("Location: ../menu.php");
+$cart_count = 0;
+foreach ($_SESSION['cart'] as $item) {
+    $cart_count += $item['qty'] ?? 1;
+}
+
+echo json_encode(["success" => true, "cart_count" => $cart_count]);
 exit;
 ?>
