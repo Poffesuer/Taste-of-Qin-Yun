@@ -36,6 +36,7 @@ if (session_status() === PHP_SESSION_NONE) {
             <section class="menu">
 
                 <div class="menu-category" id="appetizers">
+                    
                     <section class="menu-row">
                         <section class="menu-section">
                             <img src="images/cart.png" class="item">
@@ -47,6 +48,7 @@ if (session_status() === PHP_SESSION_NONE) {
                                 <button class="btn" type="submit">Add to Cart</button>
                             </form>
                         </section>
+
                         <section class="menu-section">
                             <img src="images/cart.png" class="item">
                             <h2>Bruschetta - $8</h2>

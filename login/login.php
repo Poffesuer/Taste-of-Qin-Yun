@@ -229,7 +229,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
           Already have an account?
           <a href="#" id="showLoginFromRegister">Login</a>
           <br>
-          Password rule: at least 6 characters with uppercase, lowercase, number, and symbol.
+          
         </p>
       </form>
 
