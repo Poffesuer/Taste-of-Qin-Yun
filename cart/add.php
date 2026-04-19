@@ -1,18 +1,23 @@
 <?php
+/**
+ * Authors: Harry, Hetarth, Braden, Leon, Uzair
+ * Date: April 19
+ * Description: Backend endpoint to process incoming requests and add distinct menu items to the session cart array via AJAX.
+ */
 session_start();
 
 $id = filter_input(INPUT_POST, "id", FILTER_VALIDATE_INT);
 
 $products = [
-    1 => ["name" => "Bruschetta", "price" => 8],
-    2 => ["name" => "Garlic Bread", "price" => 6],
-    3 => ["name" => "Stuffed Mushrooms", "price" => 10],
-    4 => ["name" => "Spaghetti Bolognese", "price" => 15],
-    5 => ["name" => "Grilled Salmon", "price" => 22],
-    6 => ["name" => "Margherita Pizza", "price" => 14],
-    7 => ["name" => "Tiramisu", "price" => 9],
-    8 => ["name" => "Cheesecake", "price" => 8],
-    9 => ["name" => "Red Wine", "price" => 7]
+    1 => ["name" => "Traditional Liangpi", "price" => 9.38],
+    2 => ["name" => "Traditional Wide Liangpi", "price" => 10.00],
+    3 => ["name" => "Steamed Rice Noodle", "price" => 10.00],
+    4 => ["name" => "Spinach Liangpi", "price" => 10.00],
+    5 => ["name" => "Liangpi in Sesame Sauce", "price" => 10.00],
+    6 => ["name" => "Liangpi in Minced Pork Soup", "price" => 12.50],
+    7 => ["name" => "Pulled Pork Mo", "price" => 7.50],
+    8 => ["name" => "Lamb Mo", "price" => 10.63],
+    9 => ["name" => "Saucy Pork Mo", "price" => 8.75]
 ];
 
 if ($id === false || !isset($products[$id])) {
@@ -26,9 +31,9 @@ $_SESSION['cart'] = $_SESSION['cart'] ?? [];
 
 $found = false;
 
-foreach ($_SESSION['cart'] as &$item) {
+foreach ($_SESSION['cart'] as $index => $item) {
     if ($item['name'] === $product['name']) {
-        $item['qty'] = ($item['qty'] ?? 1) + 1;
+        $_SESSION['cart'][$index]['qty'] = ($_SESSION['cart'][$index]['qty'] ?? 1) + 1;
         $found = true;
         break;
     }

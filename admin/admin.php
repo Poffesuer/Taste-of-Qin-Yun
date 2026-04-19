@@ -1,4 +1,9 @@
 <?php
+/**
+ * Authors: Harry, Hetarth, Braden, Leon, Uzair
+ * Date: April 19
+ * Description: Secure administrator dashboard to manage incoming restaurant orders and analytics.
+ */
 session_start();
 
 require __DIR__ . '/../includes/connect.php';
@@ -85,7 +90,8 @@ foreach ($orderItemsRows as $itemRow) {
         <div class="admin-dashboard-inner">
             <h1 class="admin-dashboard-title">Orders</h1>
             <p class="admin-dashboard-meta">Signed in as
-                <?php echo htmlspecialchars($_SESSION['username'] ?? '', ENT_QUOTES, 'UTF-8'); ?>.</p>
+                <?php echo htmlspecialchars($_SESSION['username'] ?? '', ENT_QUOTES, 'UTF-8'); ?>.
+            </p>
 
             <?php if (count($orders) === 0): ?>
                 <p class="switch-text">No orders in the database yet.</p>

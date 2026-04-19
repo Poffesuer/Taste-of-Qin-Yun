@@ -1,5 +1,10 @@
 /* BRADEN CODE */
 
+/**
+ * Authors: Harry, Hetarth, Braden, Leon, Uzair
+ * Date: April 19
+ * Description: Master stylesheet for the entire application containing variables, structure grids, and responsive components.
+ */
 :root {
     --primary: #3ba057;
     --primary-dark: #308247;

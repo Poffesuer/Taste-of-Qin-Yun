@@ -1,3 +1,8 @@
+/**
+ * Authors: Harry, Hetarth, Braden, Leon, Uzair
+ * Date: April 19
+ * Description: Intercepts form submissions structurally to add items asynchronously using the fetch AJAX API seamlessly.
+ */
 document.addEventListener('DOMContentLoaded', () => {
     // AJAX Add to Cart
     document.querySelectorAll('form[action="cart/add.php"]').forEach(form => {

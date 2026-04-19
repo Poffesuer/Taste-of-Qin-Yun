@@ -1,4 +1,9 @@
 <?php
+/**
+ * Authors: Harry, Hetarth, Braden, Leon, Uzair
+ * Date: April 19
+ * Description: Modifies the specific item quantity based on user interaction from the cart basket page.
+ */
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

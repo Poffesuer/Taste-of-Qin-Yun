@@ -1,4 +1,9 @@
 <?php
+/**
+ * Authors: Harry, Hetarth, Braden, Leon, Uzair
+ * Date: April 19
+ * Description: Secures the checkout flow, displays the order summary, and handles user payment validation.
+ */
 session_start();
 
 if (!isset($_SESSION['user_id'])) {

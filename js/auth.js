@@ -1,3 +1,8 @@
+/**
+ * Authors: Harry, Hetarth, Braden, Leon, Uzair
+ * Date: April 19
+ * Description: Handles client-side Javascript logic for toggling the authentication portal forms.
+ */
 const loginForm = document.getElementById("loginForm");
 const registerForm = document.getElementById("registerForm");
 const resetForm = document.getElementById("resetForm");

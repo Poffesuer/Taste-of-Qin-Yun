@@ -1,4 +1,9 @@
 <?php
+/**
+ * Authors: Harry, Hetarth, Braden, Leon, Uzair
+ * Date: April 19
+ * Description: Renders the user's shopping basket showing items added, quantity modification controls, and cost calculation.
+ */
 session_start();
 $cart = $_SESSION['cart'] ?? [];
 

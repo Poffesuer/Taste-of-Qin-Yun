@@ -1,4 +1,9 @@
 <?php
+/**
+ * Authors: Harry, Hetarth, Braden, Leon, Uzair
+ * Date: April 19
+ * Description: Authentication endpoint rendering the dual login and registration form portal.
+ */
 session_start();
 
 require "../includes/connect.php";
@@ -236,7 +241,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
           Already have an account?
           <a href="#" id="showLoginFromRegister">Login</a>
           <br>
-          
+
         </p>
       </form>
 

@@ -1,4 +1,9 @@
 <?php
+/**
+ * Authors: Harry, Hetarth, Braden, Leon, Uzair
+ * Date: April 19
+ * Description: Secure user dashboard listing personalized profile details and past order history.
+ */
 session_start();
 
 if (!isset($_SESSION["user_id"])) {

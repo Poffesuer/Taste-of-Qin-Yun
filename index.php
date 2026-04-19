@@ -1,4 +1,9 @@
 <?php
+/**
+ * Authors: Harry, Hetarth, Braden, Leon, Uzair
+ * Date: April 19
+ * Description: Main landing page introducing Taste of Qin Yun.
+ */
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
@@ -76,7 +81,8 @@ if (session_status() === PHP_SESSION_NONE) {
                 </ul>
             </div>
             <div class="home-location-col home-location-media">
-                <img src="images/location.png" alt="Map and directions to Taste of Qin Yun" loading="lazy" decoding="async">
+                <img src="images/location.png" alt="Map and directions to Taste of Qin Yun" loading="lazy"
+                    decoding="async">
             </div>
         </div>
     </section>

@@ -1,3 +1,8 @@
+/**
+ * Authors: Harry, Hetarth, Braden, Leon, Uzair
+ * Date: April 19
+ * Description: Vanilla JS class to format and validate raw form inputs flawlessly in real-time during the checkout process.
+ */
 class CheckoutValidator {
     constructor() {
         this.form = document.querySelector('.checkout-container');
@@ -29,7 +34,7 @@ class CheckoutValidator {
 
             // Real-time masking & formatting
             input.addEventListener('input', (e) => this.handleInput(key, e));
-            
+
             // Validation on blur and on change
             input.addEventListener('blur', () => {
                 this.validateField(key);
@@ -58,7 +63,7 @@ class CheckoutValidator {
             case 'cc_number':
                 // Auto-format into groups of 4, numbers only
                 let rawNum = val.replace(/\D/g, '').substring(0, 16);
-                
+
                 // Detect card type (simplified)
                 if (/^4/.test(rawNum)) this.cardType = 'visa';
                 else if (/^5[1-5]/.test(rawNum) || /^2[2-7]/.test(rawNum)) this.cardType = 'mastercard';
@@ -103,7 +108,7 @@ class CheckoutValidator {
     validateField(key) {
         const input = this.fields[key];
         if (!input) return false;
-        
+
         let isValid = true;
         let errorMessage = '';
         const val = input.value.trim();
@@ -118,13 +123,13 @@ class CheckoutValidator {
                 // Check if email or phone
                 const isEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
                 const isPhone = /^[\+\d\s\-\(\)]{10,15}$/.test(val);
-                
+
                 if (!isEmail && !isPhone) {
                     isValid = false;
                     errorMessage = 'Enter a valid email address or phone number';
                 }
                 break;
-            
+
             case 'first_name':
             case 'last_name':
                 if (val.length < 2) {
@@ -162,7 +167,7 @@ class CheckoutValidator {
                     const [mm, yy] = val.split('/');
                     const expYear = parseInt('20' + yy, 10);
                     const expMonth = parseInt(mm, 10);
-                    
+
                     const now = new Date();
                     const curMonth = now.getMonth() + 1;
                     const curYear = now.getFullYear();
@@ -197,7 +202,7 @@ class CheckoutValidator {
     setFieldState(key, isValid, errorMsg) {
         const input = this.fields[key];
         const errorSpan = document.getElementById(`error-${key}`);
-        
+
         if (isValid) {
             input.classList.remove('invalid');
             input.classList.add('valid');
