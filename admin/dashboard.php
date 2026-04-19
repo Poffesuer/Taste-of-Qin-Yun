@@ -47,8 +47,9 @@ foreach ($orderItemsRows as $itemRow) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin — Orders</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css?v=<?php echo time(); ?>">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <style>
         .order-items-row {
             display: none;
@@ -83,7 +84,8 @@ foreach ($orderItemsRows as $itemRow) {
     <main class="admin-dashboard-main">
         <div class="admin-dashboard-inner">
             <h1 class="admin-dashboard-title">Orders</h1>
-            <p class="admin-dashboard-meta">Signed in as <?php echo htmlspecialchars($_SESSION['username'] ?? '', ENT_QUOTES, 'UTF-8'); ?>.</p>
+            <p class="admin-dashboard-meta">Signed in as
+                <?php echo htmlspecialchars($_SESSION['username'] ?? '', ENT_QUOTES, 'UTF-8'); ?>.</p>
 
             <?php if (count($orders) === 0): ?>
                 <p class="switch-text">No orders in the database yet.</p>
@@ -110,26 +112,31 @@ foreach ($orderItemsRows as $itemRow) {
                                 <?php $orderItems = $orderItemsByOrderId[$orderId] ?? []; ?>
                                 <tr>
                                     <td>
-                                        <button
-                                            type="button"
-                                            class="btn order-items-toggle"
+                                        <button type="button" class="btn order-items-toggle"
                                             data-target="order-items-<?php echo htmlspecialchars((string) $orderId, ENT_QUOTES, 'UTF-8'); ?>"
-                                            aria-expanded="false"
-                                        >
+                                            aria-expanded="false">
                                             View Items
                                         </button>
                                     </td>
-                                    <td><?php echo htmlspecialchars((string) ($o['order_id'] ?? ''), ENT_QUOTES, 'UTF-8'); ?></td>
-                                    <td><?php echo htmlspecialchars((string) ($o['customer_name'] ?? ''), ENT_QUOTES, 'UTF-8'); ?></td>
+                                    <td><?php echo htmlspecialchars((string) ($o['order_id'] ?? ''), ENT_QUOTES, 'UTF-8'); ?>
+                                    </td>
+                                    <td><?php echo htmlspecialchars((string) ($o['customer_name'] ?? ''), ENT_QUOTES, 'UTF-8'); ?>
+                                    </td>
                                     <td><?php echo htmlspecialchars((string) ($o['email'] ?? ''), ENT_QUOTES, 'UTF-8'); ?></td>
                                     <td><?php echo htmlspecialchars((string) ($o['phone'] ?? ''), ENT_QUOTES, 'UTF-8'); ?></td>
-                                    <td><?php echo htmlspecialchars((string) ($o['address'] ?? ''), ENT_QUOTES, 'UTF-8'); ?></td>
-                                    <td>$<?php echo htmlspecialchars(number_format((float) ($o['total_price'] ?? 0), 2), ENT_QUOTES, 'UTF-8'); ?></td>
-                                    <td><?php echo htmlspecialchars((string) ($o['payment_method'] ?? ''), ENT_QUOTES, 'UTF-8'); ?></td>
-                                    <td><?php echo htmlspecialchars((string) ($o['order_status'] ?? ''), ENT_QUOTES, 'UTF-8'); ?></td>
-                                    <td><?php echo htmlspecialchars((string) ($o['created_at'] ?? ''), ENT_QUOTES, 'UTF-8'); ?></td>
+                                    <td><?php echo htmlspecialchars((string) ($o['address'] ?? ''), ENT_QUOTES, 'UTF-8'); ?>
+                                    </td>
+                                    <td>$<?php echo htmlspecialchars(number_format((float) ($o['total_price'] ?? 0), 2), ENT_QUOTES, 'UTF-8'); ?>
+                                    </td>
+                                    <td><?php echo htmlspecialchars((string) ($o['payment_method'] ?? ''), ENT_QUOTES, 'UTF-8'); ?>
+                                    </td>
+                                    <td><?php echo htmlspecialchars((string) ($o['order_status'] ?? ''), ENT_QUOTES, 'UTF-8'); ?>
+                                    </td>
+                                    <td><?php echo htmlspecialchars((string) ($o['created_at'] ?? ''), ENT_QUOTES, 'UTF-8'); ?>
+                                    </td>
                                 </tr>
-                                <tr id="order-items-<?php echo htmlspecialchars((string) $orderId, ENT_QUOTES, 'UTF-8'); ?>" class="order-items-row">
+                                <tr id="order-items-<?php echo htmlspecialchars((string) $orderId, ENT_QUOTES, 'UTF-8'); ?>"
+                                    class="order-items-row">
                                     <td colspan="10">
                                         <div class="order-items-wrap">
                                             <?php if (count($orderItems) === 0): ?>
@@ -151,10 +158,14 @@ foreach ($orderItemsRows as $itemRow) {
                                                             $itemQuantity = (int) ($item['quantity'] ?? 0);
                                                             ?>
                                                             <tr>
-                                                                <td><?php echo htmlspecialchars((string) ($item['product_name'] ?? ''), ENT_QUOTES, 'UTF-8'); ?></td>
-                                                                <td>$<?php echo htmlspecialchars(number_format($itemPrice, 2), ENT_QUOTES, 'UTF-8'); ?></td>
-                                                                <td><?php echo htmlspecialchars((string) $itemQuantity, ENT_QUOTES, 'UTF-8'); ?></td>
-                                                                <td>$<?php echo htmlspecialchars(number_format($itemPrice * $itemQuantity, 2), ENT_QUOTES, 'UTF-8'); ?></td>
+                                                                <td><?php echo htmlspecialchars((string) ($item['product_name'] ?? ''), ENT_QUOTES, 'UTF-8'); ?>
+                                                                </td>
+                                                                <td>$<?php echo htmlspecialchars(number_format($itemPrice, 2), ENT_QUOTES, 'UTF-8'); ?>
+                                                                </td>
+                                                                <td><?php echo htmlspecialchars((string) $itemQuantity, ENT_QUOTES, 'UTF-8'); ?>
+                                                                </td>
+                                                                <td>$<?php echo htmlspecialchars(number_format($itemPrice * $itemQuantity, 2), ENT_QUOTES, 'UTF-8'); ?>
+                                                                </td>
                                                             </tr>
                                                         <?php endforeach; ?>
                                                     </tbody>
@@ -170,7 +181,8 @@ foreach ($orderItemsRows as $itemRow) {
             <?php endif; ?>
 
             <p class="switch-text" style="margin-top: 1.5rem;">
-                <a href="../login/logout.php" class="btn" style="display:inline-block; text-align:center; text-decoration:none;">Logout</a>
+                <a href="../login/logout.php" class="btn"
+                    style="display:inline-block; text-align:center; text-decoration:none;">Logout</a>
             </p>
         </div>
     </main>
