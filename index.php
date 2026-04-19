@@ -51,6 +51,35 @@ if (session_status() === PHP_SESSION_NONE) {
             </section>
         </section>
     </section>
+
+    <section class="home-location" aria-labelledby="location-heading">
+        <div class="home-location-inner">
+            <div class="home-location-col home-location-info">
+                <h2 id="location-heading">Taste of Qin Yun</h2>
+                <address class="home-location-address">
+                    23 Bonis Ave, Scarborough, ON<br>
+                    Canada<br>
+                    M1T 2T9
+                </address>
+                <p class="home-location-tel">Tel: <a href="tel:+14168396998">416-839-6998</a></p>
+            </div>
+            <div class="home-location-col home-location-hours-wrap" aria-labelledby="location-hours-heading">
+                <h3 id="location-hours-heading" class="home-location-hours-title">Business Hours</h3>
+                <ul class="home-location-hours">
+                    <li><span class="home-location-day">Mon:</span> Closed</li>
+                    <li><span class="home-location-day">Tue:</span> 11:00am - 6:30pm</li>
+                    <li><span class="home-location-day">Wed:</span> 11:00am - 6:30pm</li>
+                    <li><span class="home-location-day">Thu:</span> 11:00am - 6:30pm</li>
+                    <li><span class="home-location-day">Fri:</span> 11:00am - 6:30pm</li>
+                    <li><span class="home-location-day">Sat:</span> 11:00am - 6:30pm</li>
+                    <li><span class="home-location-day">Sun:</span> 11:00am - 6:30pm</li>
+                </ul>
+            </div>
+            <div class="home-location-col home-location-media">
+                <img src="images/location.png" alt="Map and directions to Taste of Qin Yun" loading="lazy" decoding="async">
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>

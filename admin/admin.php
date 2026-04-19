@@ -148,7 +148,7 @@ foreach ($orderItemsRows as $itemRow) {
                                                             <th scope="col">Product</th>
                                                             <th scope="col">Price</th>
                                                             <th scope="col">Quantity</th>
-                                                            <th scope="col">Line Total</th>
+                                                            <th scope="col">Amount Total</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>

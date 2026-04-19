@@ -106,7 +106,7 @@ nav a:hover {
     margin-top: 40px;
     text-align: center;
     position: absolute;
-    top: 43%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: var(--background);
@@ -116,8 +116,8 @@ nav a:hover {
 
 .display {
     display: flex;
-
-    top: 60%;
+    margin-top: 10rem;
+    top: 70%;
     justify-content: center;
     align-items: center;
     z-index: 1;
@@ -148,6 +148,91 @@ nav a:hover {
     padding: 10px;
     margin: 0px 20px;
     margin-bottom: 20px;
+}
+
+.home-location {
+    border-top: 3px solid var(--primary);
+    background-color: var(--background);
+    margin-top: 5rem;
+    padding: 10rem 5rem;
+}
+
+.home-location-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+    gap: 2rem;
+    max-width: 72rem;
+    margin: 0 auto;
+}
+
+.home-location-col {
+    min-width: 0;
+}
+
+.home-location-info h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.home-location-address {
+    font-style: normal;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.home-location-tel {
+    margin-bottom: 0;
+}
+
+.home-location-tel a {
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.home-location-tel a:hover {
+    color: var(--primary-dark);
+}
+
+.home-location-hours-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--primary);
+}
+
+.home-location-hours {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 1.7;
+    color: var(--primary);
+}
+
+.home-location-hours li {
+    margin-bottom: 0.65rem;
+}
+
+.home-location-hours li:last-child {
+    margin-bottom: 0;
+}
+
+.home-location-day {
+    display: inline-block;
+    min-width: 3.25rem;
+    font-weight: 500;
+}
+
+.home-location-media img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 3px solid var(--primary);
+    object-fit: contain;
 }
 
 
@@ -207,6 +292,15 @@ nav a:hover {
     .display-item p {
         margin: 0 12px 14px;
         font-size: 0.95rem;
+    }
+
+    .home-location {
+        padding: 1.75rem 1rem 2rem;
+    }
+
+    .home-location-inner {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 }
 
