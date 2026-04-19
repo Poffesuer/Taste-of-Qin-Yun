@@ -10,7 +10,6 @@ if (strpos($_SERVER['REQUEST_URI'], '/taste-of-qin-yun') === 0) {
     <a href="<?php echo $base_url; ?>/index.php">Home</a>
     <a href="<?php echo $base_url; ?>/menu.php">Menu</a>
     <?php if (isset($_SESSION['user_id'])): ?>
-        <a href="<?php echo $base_url; ?>/login/dashboard.php">Dashboard</a>
         <a href="<?php echo $base_url; ?>/login/logout.php">Logout</a>
     <?php else: ?>
         <a href="<?php echo $base_url; ?>/login/login.php">Login</a>
