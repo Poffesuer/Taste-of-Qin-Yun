@@ -30,8 +30,7 @@ if (session_status() === PHP_SESSION_NONE) {
                 <a href="#all-items">All Items</a>
                 <a href="#traditional-liangpi">Traditional Liangpi</a>
                 <a href="#special-liangpi">Special Liangpi & Soups</a>
-                <a href="#traditional-mo">Traditional Mo (Buns)</a>
-                <a href="#special-mo">Special Mo</a>
+                <a href="#mo-buns">Mo (Buns)</a>
             </aside>
 
             <section class="menu">
@@ -103,7 +102,7 @@ if (session_status() === PHP_SESSION_NONE) {
                     </section>
                 </div>
 
-                <div class="menu-category" id="traditional-mo" hidden>
+                <div class="menu-category" id="mo-buns" hidden>
                     <section class="menu-row">
                         <section class="menu-section">
                             <img src="images/menu/18.png" class="item" onerror="this.src='images/cart.png'">
@@ -125,11 +124,6 @@ if (session_status() === PHP_SESSION_NONE) {
                                 <button class="btn" type="submit">Add to Cart</button>
                             </form>
                         </section>
-                    </section>
-                </div>
-
-                <div class="menu-category" id="special-mo" hidden>
-                    <section class="menu-row">
                         <section class="menu-section">
                             <img src="images/menu/20.png" class="item" onerror="this.src='images/cart.png'">
                             <h2>Saucy Pork Mo - $8.75</h2>
