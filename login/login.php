@@ -53,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $_SESSION["is_admin"] = !empty((int) ($user["is_admin"] ?? 0));
 
         if (!empty($_SESSION["is_admin"])) {
-          header("Location: ../admin/dashboard.php");
+          header("Location: ../admin/admin.php");
         } else {
           header("Location: dashboard.php");
         }
