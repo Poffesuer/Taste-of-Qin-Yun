@@ -184,7 +184,7 @@ if (session_status() === PHP_SESSION_NONE) {
         })();
 
     </script>
-    <script src="js/ajax-cart.js?v=<?php echo time(); ?>"></script>
+    <script src="js/cart.js?v=<?php echo time(); ?>"></script>
 
 </body>
 
