@@ -117,7 +117,7 @@ nav a:hover {
 .display {
     display: flex;
 
-    top: 50%;
+    top: 60%;
     justify-content: center;
     align-items: center;
     z-index: 1;
@@ -150,6 +150,79 @@ nav a:hover {
     margin-bottom: 20px;
 }
 
+
+/* Home page (index.php) — mobile */
+@media screen and (max-width: 768px) {
+    .home-top img {
+        height: auto;
+        max-height: 40vh;
+        min-height: 12rem;
+        object-fit: cover;
+    }
+
+    .home-top h1 {
+        font-size: clamp(1.35rem, 5vw, 2rem);
+        padding: 12px 16px;
+        margin-top: 0;
+        top: 14%;
+        width: calc(100% - 2rem);
+        max-width: 22rem;
+        justify-content: center;
+    }
+
+    .home-top h3 {
+        font-size: clamp(1rem, 4vw, 1.35rem);
+        padding: 10px 14px;
+        margin-top: 0;
+        top: 20%;
+        width: calc(100% - 2rem);
+        max-width: 18rem;
+        justify-content: center;
+    }
+
+    .display {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        padding: 0 0.75rem 1.5rem;
+        gap: 0;
+    }
+
+    .display-item {
+        margin: 0.75rem 0;
+        max-width: 100%;
+    }
+
+    .display-item img.item {
+        height: 180px;
+        object-fit: cover;
+    }
+
+    .display-item h2 {
+        font-size: 1.1rem;
+        margin: 0 12px;
+        margin-top: 12px;
+    }
+
+    .display-item p {
+        margin: 0 12px 14px;
+        font-size: 0.95rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .home-top h1 {
+        top: 12%;
+    }
+
+    .home-top h3 {
+        top: 18%;
+    }
+
+    .home-top img {
+        max-height: 32vh;
+    }
+}
 
 /* MENU PAGE */
 
