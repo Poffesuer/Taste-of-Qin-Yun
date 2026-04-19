@@ -136,7 +136,7 @@ if (!empty($_SESSION['username'])) {
                                     </div>
                                     <div class="summary-price-qty">
                                         <div class="summary-price">$<?= number_format($item['price'] * $qty, 2) ?></div>
-                                        <div class="summary-qty-indicator">- <?= $qty ?> +</div>
+                                        <div class="summary-qty-indicator">Qty: <?= $qty ?></div>
                                     </div>
                                 </div>
                             <?php endforeach; ?>
