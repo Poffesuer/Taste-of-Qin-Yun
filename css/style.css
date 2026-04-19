@@ -259,20 +259,24 @@ nav a:hover {
 
 .menu {
     width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
 
+.menu-category:not([hidden]) {
+    display: contents;
 }
 
 .menu-row {
-    display: flex;
-    flex-direction: row;
-    margin-right:1.5rem;
+    display: contents;
 }
 
 .menu-section {
     display: flex;
     flex-direction: column;
-    width: 32%;
-    margin: 10px;
+    width: 30%;
+    margin: 1.5%;
     padding: 10px;
     border-radius: 5px;
 
@@ -311,6 +315,10 @@ nav a:hover {
     font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
+}
+
+.menu-section form {
+    margin-top: auto;
 }
 
 .sidebar-left {
@@ -905,6 +913,57 @@ nav a:hover {
 .success-message h2 {
     margin-bottom: 20px;
     color: var(--primary);
+}
+
+/* Validation Styling */
+.checkout-input-group input {
+    transition: border-color 0.3s;
+}
+
+.checkout-input-group input.valid {
+    border-color: #3ba057 !important;
+}
+
+.checkout-input-group input.invalid {
+    border-color: #e74c3c !important;
+}
+
+.error-msg {
+    color: #e74c3c;
+    font-size: 13px;
+    margin-top: 4px;
+    display: none;
+    font-weight: 500;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+}
+
+.checkout-purchase-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.checkout-purchase-btn.is-loading {
+    opacity: 0.7;
+    cursor: wait;
 }
 
 @media (max-width: 900px) {

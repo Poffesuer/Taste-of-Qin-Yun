@@ -19,11 +19,7 @@ if (session_status() === PHP_SESSION_NONE) {
     <?php include 'includes/header.php'; ?>
 
     <main>
-        <section class="menu-top">
-            <img src="images/cart.png" alt="background">
-            <h1>Our Menu</h1>
-        </section>
-
+        <!-- Removed menu-top section as requested -->
         <section class="menu-layout">
             <aside class="sidebar-left">
                 <a href="#all-items">All Items</a>
@@ -39,25 +35,32 @@ if (session_status() === PHP_SESSION_NONE) {
                     
                     <section class="menu-row">
                         <section class="menu-section">
-                            <img src="images/cart.png" class="item">
+                            <img src="images/menu/1.png" class="item" onerror="this.src='images/cart.png'">
                             <h2>Bruschetta - $8</h2>
-                            <p>askjdsaldkjaslkdjdsklaj</p>
+                            <p>Toasted bread with tomatoes, garlic, and basil.</p>
                             <form method="POST" action="cart/add.php">
-                                <input type="hidden" name="id" value=1>
-                                <input type="hidden" name="price">
+                                <input type="hidden" name="id" value="1">
                                 <button class="btn" type="submit">Add to Cart</button>
                             </form>
                         </section>
 
                         <section class="menu-section">
-                            <img src="images/cart.png" class="item">
-                            <h2>Bruschetta - $8</h2>
-                            <p>askjdsaldkjaslkdjdsklaj</p>
+                            <img src="images/menu/2.png" class="item" onerror="this.src='images/cart.png'">
+                            <h2>Garlic Bread - $6</h2>
+                            <p>Freshly baked bread with butter and garlic.</p>
+                            <form method="POST" action="cart/add.php">
+                                <input type="hidden" name="id" value="2">
+                                <button class="btn" type="submit">Add to Cart</button>
+                            </form>
                         </section>
                         <section class="menu-section">
-                            <img src="images/cart.png" class="item">
-                            <h2>Bruschetta - $8</h2>
-                            <p>askjdsaldkjaslkdjdsklaj</p>
+                            <img src="images/menu/3.png" class="item" onerror="this.src='images/cart.png'">
+                            <h2>Stuffed Mushrooms - $10</h2>
+                            <p>Mushrooms stuffed with cheese and herbs.</p>
+                            <form method="POST" action="cart/add.php">
+                                <input type="hidden" name="id" value="3">
+                                <button class="btn" type="submit">Add to Cart</button>
+                            </form>
                         </section>
                     </section>
                 </div>
@@ -65,19 +68,31 @@ if (session_status() === PHP_SESSION_NONE) {
                 <div class="menu-category" id="main-courses" hidden>
                     <section class="menu-row">
                         <section class="menu-section">
-                            <img src="images/cart.png" class="item">
-                            <h2>Bruschetta - $8</h2>
-                            <p>askjdsaldkjaslkdjdsklaj</p>
+                            <img src="images/menu/5.png" class="item" onerror="this.src='images/cart.png'">
+                            <h2>Spaghetti Bolognese - $15</h2>
+                            <p>Classic Italian pasta with rich meat sauce.</p>
+                            <form method="POST" action="cart/add.php">
+                                <input type="hidden" name="id" value="4">
+                                <button class="btn" type="submit">Add to Cart</button>
+                            </form>
                         </section>
                         <section class="menu-section">
-                            <img src="images/cart.png" class="item">
-                            <h2>Bruschetta - $8</h2>
-                            <p>askjdsaldkjaslkdjdsklaj</p>
+                            <img src="images/menu/8.png" class="item" onerror="this.src='images/cart.png'">
+                            <h2>Grilled Salmon - $22</h2>
+                            <p>Fresh salmon served with roasted vegetables.</p>
+                            <form method="POST" action="cart/add.php">
+                                <input type="hidden" name="id" value="5">
+                                <button class="btn" type="submit">Add to Cart</button>
+                            </form>
                         </section>
                         <section class="menu-section">
-                            <img src="images/cart.png" class="item">
-                            <h2>Bruschetta - $8</h2>
-                            <p>askjdsaldkjaslkdjdsklaj</p>
+                            <img src="images/menu/10.png" class="item" onerror="this.src='images/cart.png'">
+                            <h2>Margherita Pizza - $14</h2>
+                            <p>Wood-fired pizza with tomato, mozzarella, and basil.</p>
+                            <form method="POST" action="cart/add.php">
+                                <input type="hidden" name="id" value="6">
+                                <button class="btn" type="submit">Add to Cart</button>
+                            </form>
                         </section>
                     </section>
                 </div>
@@ -85,14 +100,22 @@ if (session_status() === PHP_SESSION_NONE) {
                 <div class="menu-category" id="desserts" hidden>
                     <section class="menu-row">
                         <section class="menu-section">
-                            <img src="images/cart.png" class="item">
-                            <h2>Bruschetta - $8</h2>
-                            <p>askjdsaldkjaslkdjdsklaj</p>
+                            <img src="images/menu/18.png" class="item" onerror="this.src='images/cart.png'">
+                            <h2>Tiramisu - $9</h2>
+                            <p>Coffee-flavored Italian dessert.</p>
+                            <form method="POST" action="cart/add.php">
+                                <input type="hidden" name="id" value="7">
+                                <button class="btn" type="submit">Add to Cart</button>
+                            </form>
                         </section>
                         <section class="menu-section">
-                            <img src="images/cart.png" class="item">
-                            <h2>Bruschetta - $8</h2>
-                            <p>askjdsaldkjaslkdjdsklaj</p>
+                            <img src="images/menu/19.png" class="item" onerror="this.src='images/cart.png'">
+                            <h2>Cheesecake - $8</h2>
+                            <p>Creamy New York style cheesecake.</p>
+                            <form method="POST" action="cart/add.php">
+                                <input type="hidden" name="id" value="8">
+                                <button class="btn" type="submit">Add to Cart</button>
+                            </form>
                         </section>
                     </section>
                 </div>
@@ -100,9 +123,13 @@ if (session_status() === PHP_SESSION_NONE) {
                 <div class="menu-category" id="drinks" hidden>
                     <section class="menu-row">
                         <section class="menu-section">
-                            <img src="images/cart.png" class="item">
-                            <h2>Bruschetta - $8</h2>
-                            <p>askjdsaldkjaslkdjdsklaj</p>
+                            <img src="images/menu/20.png" class="item" onerror="this.src='images/cart.png'">
+                            <h2>Red Wine - $7</h2>
+                            <p>Glass of house red wine.</p>
+                            <form method="POST" action="cart/add.php">
+                                <input type="hidden" name="id" value="9">
+                                <button class="btn" type="submit">Add to Cart</button>
+                            </form>
                         </section>
                     </section>
                 </div>

@@ -5,7 +5,14 @@ $id = filter_input(INPUT_POST, "id", FILTER_VALIDATE_INT);
 
 $products = [
     1 => ["name" => "Bruschetta", "price" => 8],
-    2 => ["name" => "Pizza", "price" => 12]
+    2 => ["name" => "Garlic Bread", "price" => 6],
+    3 => ["name" => "Stuffed Mushrooms", "price" => 10],
+    4 => ["name" => "Spaghetti Bolognese", "price" => 15],
+    5 => ["name" => "Grilled Salmon", "price" => 22],
+    6 => ["name" => "Margherita Pizza", "price" => 14],
+    7 => ["name" => "Tiramisu", "price" => 9],
+    8 => ["name" => "Cheesecake", "price" => 8],
+    9 => ["name" => "Red Wine", "price" => 7]
 ];
 
 if ($id === false || !isset($products[$id])) {

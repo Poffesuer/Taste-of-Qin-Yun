@@ -73,42 +73,51 @@ if (!empty($_SESSION['username'])) {
                         <section class="checkout-section">
                             <h2>Contact</h2>
                             <div class="checkout-input-group full">
-                                <input type="text" name="contact" placeholder="Email or phone number"
+                                <input type="text" name="contact" id="contact" placeholder="Email or phone number"
                                     value="<?= htmlspecialchars($prefill_email) ?>" required>
+                                <span class="error-msg" id="error-contact"></span>
                             </div>
                             <div class="checkout-row">
                                 <div class="checkout-input-group half">
-                                    <input type="text" name="first_name" placeholder="First Name"
+                                    <input type="text" name="first_name" id="first_name" placeholder="First Name"
                                         value="<?= htmlspecialchars($prefill_first) ?>" required>
+                                    <span class="error-msg" id="error-first_name"></span>
                                 </div>
                                 <div class="checkout-input-group half">
-                                    <input type="text" name="last_name" placeholder="Last Name"
+                                    <input type="text" name="last_name" id="last_name" placeholder="Last Name"
                                         value="<?= htmlspecialchars($prefill_last) ?>" required>
+                                    <span class="error-msg" id="error-last_name"></span>
                                 </div>
                             </div>
                         </section>
                         <section class="checkout-section">
                             <h2>Address</h2>
                             <div class="checkout-input-group full">
-                                <input type="text" name="address" placeholder="Address" required>
+                                <input type="text" name="address" id="address" placeholder="Address" required>
+                                <span class="error-msg" id="error-address"></span>
                             </div>
                         </section>
                         <section class="checkout-section">
                             <h2>Credit Card</h2>
                             <div class="checkout-box">
                                 <div class="checkout-input-group full">
-                                    <input type="text" name="cc_number" placeholder="Card number" required>
+                                    <input type="text" name="cc_number" id="cc_number" placeholder="Card number" required>
+                                    <span class="error-msg" id="error-cc_number"></span>
                                 </div>
                                 <div class="checkout-row">
                                     <div class="checkout-input-group half">
-                                        <input type="text" name="cc_exp" placeholder="Expiration date (MM/YY)" required>
+                                        <input type="text" name="cc_exp" id="cc_exp" placeholder="Expiration date (MM/YY)"
+                                            required>
+                                        <span class="error-msg" id="error-cc_exp"></span>
                                     </div>
                                     <div class="checkout-input-group half">
-                                        <input type="text" name="cc_cvc" placeholder="Security code" required>
+                                        <input type="text" name="cc_cvc" id="cc_cvc" placeholder="Security code" required>
+                                        <span class="error-msg" id="error-cc_cvc"></span>
                                     </div>
                                 </div>
                                 <div class="checkout-input-group full">
-                                    <input type="text" name="cc_name" placeholder="Name on card" required>
+                                    <input type="text" name="cc_name" id="cc_name" placeholder="Name on card" required>
+                                    <span class="error-msg" id="error-cc_name"></span>
                                 </div>
                             </div>
                         </section>
@@ -152,6 +161,7 @@ if (!empty($_SESSION['username'])) {
             <?php endif; ?>
         </div>
     </main>
+    <script src="../js/checkout-validator.js"></script>
 </body>
 
 </html>

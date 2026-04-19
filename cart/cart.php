@@ -42,8 +42,6 @@ foreach ($cart as $item) {
 
                         <div class="cart-item">
 
-                            <img src="<?= htmlspecialchars($item['image'] ?? '../images/cart.png') ?>">
-
                             <div class="col">
                                 <div class="cart-item-name"><?= htmlspecialchars($item['name']) ?></div>
                                 <div class="cart-item-desc"></div>
