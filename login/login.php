@@ -50,7 +50,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $_SESSION["username"] = $user["username"];
         $_SESSION["email"] = $user["email"];
         $_SESSION["welcome_type"] = "old";
-        header("Location: dashboard.php");
+        $_SESSION["is_admin"] = !empty((int) ($user["is_admin"] ?? 0));
+
+        if (!empty($_SESSION["is_admin"])) {
+          header("Location: ../admin/dashboard.php");
+        } else {
+          header("Location: dashboard.php");
+        }
         exit;
       }
     }
@@ -90,13 +96,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $messageClass = "error-message";
       } else {
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-        $insert = $pdo->prepare("INSERT INTO login_details (email, username, password) VALUES (?, ?, ?)");
+        $insert = $pdo->prepare("INSERT INTO login_details (email, username, password, is_admin) VALUES (?, ?, ?, 0)");
         $insert->execute([$email, $username, $hashedPassword]);
 
         $_SESSION["user_id"] = $pdo->lastInsertId();
         $_SESSION["username"] = $username;
         $_SESSION["email"] = $email;
         $_SESSION["welcome_type"] = "new";
+        $_SESSION["is_admin"] = false;
         header("Location: dashboard.php");
         exit;
       }

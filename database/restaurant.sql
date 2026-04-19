@@ -32,6 +32,7 @@ CREATE TABLE `login_details` (
   `email` varchar(100) NOT NULL,
   `username` varchar(30) NOT NULL,
   `password` varchar(255) NOT NULL,
+  `is_admin` tinyint(1) NOT NULL DEFAULT 0,
   `created_at` datetime NOT NULL DEFAULT current_timestamp(),
   `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -40,9 +41,10 @@ CREATE TABLE `login_details` (
 -- Dumping data for table `login_details`
 --
 
-INSERT INTO `login_details` (`id`, `email`, `username`, `password`, `created_at`, `updated_at`) VALUES
-(1, 'test@test.com', 'test', '$2y$10$3dZEFKARUeKb1Lr0Ndw8leyAzfRFMREvR8Jc2aK8XHjOMYLvvOE6i', '2026-04-04 01:14:49', '2026-04-04 01:16:31');
-
+INSERT INTO `login_details` (`id`, `email`, `username`, `password`, `is_admin`, `created_at`, `updated_at`) VALUES
+(1, 'test@test.com', 'test', '$2y$10$3dZEFKARUeKb1Lr0Ndw8leyAzfRFMREvR8Jc2aK8XHjOMYLvvOE6i', 0, '2026-04-04 01:14:49', '2026-04-04 01:16:31'),
+(2, 'admin@restaurant.local', 'admin', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 1, '2026-04-04 01:14:49', NULL);
+//password: password
 -- --------------------------------------------------------
 
 --
@@ -108,7 +110,7 @@ ALTER TABLE `order_items`
 -- AUTO_INCREMENT for table `login_details`
 --
 ALTER TABLE `login_details`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `orders`

@@ -40,6 +40,7 @@ nav a {
     color: var(--primary);
     border-radius: 10px;
     padding: 12px 18px;
+    margin-right: 1rem;
     width: auto;
     height: auto;
     text-align: center;
@@ -62,8 +63,7 @@ nav a:first-of-type {
 
 nav a:last-child {
     background-color: var(--primary);
-
-    margin-right: 2%;
+    margin-right: 1rem;
 }
 
 nav a:hover {
@@ -192,12 +192,13 @@ nav a:hover {
 .menu-row {
     display: flex;
     flex-direction: row;
+    margin-right:1.5rem;
 }
 
 .menu-section {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 32%;
     margin: 10px;
     padding: 10px;
     border-radius: 5px;
@@ -267,6 +268,11 @@ nav a:hover {
     background-color: var(--background-dark);
 }
 
+.sidebar-left a.is-active {
+    background-color: var(--background-dark);
+    font-weight: 600;
+}
+
 .sidebar-right {
     width: 20%;
     margin-top: 35px;
@@ -274,6 +280,42 @@ nav a:hover {
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
+}
+
+@media (max-width: 780px) {
+    .menu-layout {
+        flex-direction: column;
+    }
+
+    .sidebar-left {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 0.35rem 0.75rem;
+        padding: 1rem;
+        border-width: 0 0 1px;
+        border-bottom: 5px solid var(--background-dark);
+    }
+
+    .sidebar-left a {
+        margin: 0;
+        padding: 8px 12px;
+    }
+
+    .menu {
+        width: 100%;
+    }
+
+    .menu-row {
+        flex-direction: column;
+    }
+
+    .menu-section {
+        width: 100%;
+        max-width: 100%;
+    }
 }
 
 
@@ -518,7 +560,67 @@ nav a:hover {
 
 
 
-@media (max-width: 780px) {}
+/* ADMIN ORDERS DASHBOARD */
+.admin-dashboard-main {
+    min-height: calc(100vh - 80px);
+    padding: 40px 20px;
+    background-color: var(--background);
+}
+
+.admin-dashboard-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.admin-dashboard-title {
+    font-size: 36px;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+}
+
+.admin-dashboard-meta {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    font-size: 16px;
+}
+
+.admin-orders-scroll {
+    width: 100%;
+    overflow-x: auto;
+    border: 2px solid var(--primary);
+    border-radius: 8px;
+    background: #fff;
+}
+
+.admin-orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+    color: #222;
+}
+
+.admin-orders-table th,
+.admin-orders-table td {
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--background-dark);
+    vertical-align: top;
+}
+
+.admin-orders-table th {
+    background: var(--background-dark);
+    color: var(--primary);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.admin-orders-table tbody tr:hover {
+    background: var(--background);
+}
+
+.admin-orders-table tbody tr:last-child td {
+    border-bottom: none;
+}
 
 /* CHECKOUT PAGE */
 .checkout-wrapper {

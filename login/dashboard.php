@@ -6,6 +6,11 @@ if (!isset($_SESSION["user_id"])) {
     exit;
 }
 
+if (!empty($_SESSION["is_admin"])) {
+    header("Location: ../admin/dashboard.php");
+    exit;
+}
+
 $username = $_SESSION["username"];
 $welcomeType = $_SESSION["welcome_type"] ?? "old";
 

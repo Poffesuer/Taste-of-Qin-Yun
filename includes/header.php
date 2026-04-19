@@ -1,11 +1,12 @@
 <?php
-$base_url = '';
+$base_url = '/taste-of-qin-yun';
 if (strpos($_SERVER['REQUEST_URI'], '/taste-of-qin-yun') === 0) {
     $base_url = '/taste-of-qin-yun';
 }
 ?>
 <nav>
-    <p>Restaurant</p>
+    <img src="<?php echo $base_url; ?>/images/logo.png" class="logo">
+    <p>Taste Of Qinyun</p>
     <a href="<?php echo $base_url; ?>/index.php">Home</a>
     <a href="<?php echo $base_url; ?>/menu.php">Menu</a>
     <?php if (isset($_SESSION['user_id'])): ?>

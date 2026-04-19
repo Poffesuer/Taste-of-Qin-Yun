@@ -21,9 +21,11 @@ if (session_status() === PHP_SESSION_NONE) {
     <section class="home-top">
         <img src="images/cart.png" alt="background">
         <h1>Taste Of Qinyun</h1>
-        <h3>Top Items</h3>
 
         <section class="display">
+            
+            <h3>Top Items</h3>
+            
             <section class="display-item">
                 <img src="images/cart.png" class="item">
                 <h2>Bruschetta - $8</h2>
