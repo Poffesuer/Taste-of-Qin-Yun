@@ -181,10 +181,9 @@ nav a:hover {
 }
 
 .home-location {
-    border-top: 3px solid var(--primary);
-    background-color: var(--background);
+    background-color: var(--background-dark);
     margin-top: 5rem;
-    padding: 10rem 5rem;
+    padding: 7rem 5rem;
 }
 
 .home-location-inner {
