@@ -4,6 +4,7 @@
  * Date: April 19
  * Description: Renders the site navigation, authenticates the active session, and handles the dynamic cart indicator.
  */
+
 $base_url = '';
 if (strpos($_SERVER['REQUEST_URI'], '/taste-of-qin-yun') === 0) {
     $base_url = '/taste-of-qin-yun';

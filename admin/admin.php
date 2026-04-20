@@ -57,32 +57,6 @@ foreach ($orderItemsRows as $itemRow) {
     <link rel="stylesheet" href="../css/style.css?v=<?php echo time(); ?>">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <style>
-        .order-items-row {
-            display: none;
-        }
-
-        .order-items-wrap {
-            padding: 0.75rem 0;
-        }
-
-        .order-items-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 0.25rem 0 0.5rem;
-        }
-
-        .order-items-table th,
-        .order-items-table td {
-            border: 1px solid #ddd;
-            padding: 0.45rem 0.6rem;
-            text-align: left;
-        }
-
-        .order-items-toggle {
-            cursor: pointer;
-        }
-    </style>
 </head>
 
 <body>

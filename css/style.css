@@ -1,11 +1,13 @@
-/* BRADEN CODE */
-
 /**
  * Authors: Harry, Hetarth, Braden, Leon, Uzair
  * Date: April 19
  * Description: Master stylesheet for the entire application containing variables, structure grids, and responsive components.
  */
-:root {
+
+
+/* BRADEN CODE */
+
+ :root {
     --primary: #3ba057;
     --primary-dark: #308247;
     --background: #fafafa;
@@ -549,6 +551,95 @@ nav a:hover {
 }
 
 
+/* ADMIN ORDERS DASHBOARD */
+.admin-dashboard-main {
+    min-height: calc(100vh - 80px);
+    padding: 40px 20px;
+    background-color: var(--background);
+}
+
+.admin-dashboard-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.admin-dashboard-title {
+    font-size: 36px;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+}
+
+.admin-dashboard-meta {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    font-size: 16px;
+}
+
+.admin-orders-scroll {
+    width: 100%;
+    overflow-x: auto;
+    border: 2px solid var(--primary);
+    border-radius: 8px;
+    background: #fff;
+}
+
+.admin-orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+    color: #222;
+}
+
+.admin-orders-table th,
+.admin-orders-table td {
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--background-dark);
+    vertical-align: top;
+}
+
+.admin-orders-table th {
+    background: var(--background-dark);
+    color: var(--primary);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.admin-orders-table tbody tr:hover {
+    background: var(--background);
+}
+
+.admin-orders-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.order-items-row {
+    display: none;
+}
+
+.order-items-wrap {
+    padding: 0.75rem 0;
+}
+
+.order-items-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.25rem 0 0.5rem;
+}
+
+.order-items-table th,
+.order-items-table td {
+    border: 1px solid #ddd;
+    padding: 0.45rem 0.6rem;
+    text-align: left;
+}
+
+.order-items-toggle {
+    cursor: pointer;
+}
+
+
+
 
 /* LEON CODE */
 
@@ -789,68 +880,6 @@ nav a:hover {
 }
 
 
-
-/* ADMIN ORDERS DASHBOARD */
-.admin-dashboard-main {
-    min-height: calc(100vh - 80px);
-    padding: 40px 20px;
-    background-color: var(--background);
-}
-
-.admin-dashboard-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.admin-dashboard-title {
-    font-size: 36px;
-    margin-bottom: 0.5rem;
-    color: var(--primary);
-}
-
-.admin-dashboard-meta {
-    color: var(--primary);
-    margin-bottom: 1.5rem;
-    font-size: 16px;
-}
-
-.admin-orders-scroll {
-    width: 100%;
-    overflow-x: auto;
-    border: 2px solid var(--primary);
-    border-radius: 8px;
-    background: #fff;
-}
-
-.admin-orders-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 15px;
-    color: #222;
-}
-
-.admin-orders-table th,
-.admin-orders-table td {
-    padding: 12px 14px;
-    text-align: left;
-    border-bottom: 1px solid var(--background-dark);
-    vertical-align: top;
-}
-
-.admin-orders-table th {
-    background: var(--background-dark);
-    color: var(--primary);
-    font-weight: 600;
-    white-space: nowrap;
-}
-
-.admin-orders-table tbody tr:hover {
-    background: var(--background);
-}
-
-.admin-orders-table tbody tr:last-child td {
-    border-bottom: none;
-}
 
 /* CHECKOUT PAGE */
 .checkout-wrapper {
