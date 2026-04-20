@@ -24,7 +24,9 @@ if (session_status() === PHP_SESSION_NONE) {
     <?php include 'includes/header.php'; ?>
 
     <main>
-        <!-- Removed menu-top section as requested -->
+        <section class="menu-page-header" aria-labelledby="menu-heading">
+            <h1 id="menu-heading">Menu</h1>
+        </section>
         <section class="menu-layout">
             <aside class="sidebar-left">
                 <a href="#all-items">All Items</a>
