@@ -51,82 +51,7 @@ $tax = $total_price - $subtotal;
     <link rel="stylesheet" href="../css/style.css?v=<?= time() ?>">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <style>
-        .receipt-wrapper {
-            max-width: 600px;
-            margin: 60px auto;
-            background: #fff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-            border: 2px solid var(--primary);
-        }
 
-        .receipt-header {
-            text-align: center;
-            margin-bottom: 30px;
-            border-bottom: 2px dashed #ddd;
-            padding-bottom: 20px;
-        }
-
-        .receipt-header h1 {
-            color: var(--primary);
-            margin-bottom: 10px;
-            font-size: 2.2rem;
-        }
-
-        .receipt-details {
-            margin-bottom: 30px;
-        }
-
-        .receipt-row {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 15px;
-            font-size: 15px;
-        }
-
-        .receipt-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 30px;
-        }
-
-        .receipt-table th,
-        .receipt-table td {
-            text-align: left;
-            padding: 12px 5px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .receipt-table th {
-            font-weight: 600;
-            color: var(--primary);
-        }
-
-        .receipt-totals {
-            width: 100%;
-            border-top: 2px solid var(--primary);
-            padding-top: 20px;
-        }
-
-        .receipt-totals .receipt-row {
-            font-weight: 500;
-            font-size: 16px;
-        }
-
-        .receipt-totals .grand-total {
-            font-weight: 700;
-            font-size: 20px;
-            color: var(--primary);
-            margin-top: 15px;
-        }
-
-        .receipt-actions {
-            text-align: center;
-            margin-top: 40px;
-        }
-    </style>
 </head>
 
 <body>
@@ -203,10 +128,6 @@ $tax = $total_price - $subtotal;
                 </div>
             </div>
 
-            <div class="receipt-actions">
-                <a href="../login/dashboard.php" class="btn"
-                    style="text-decoration:none; display:inline-block; max-width:250px;">View Order History</a>
-            </div>
         </div>
     </main>
 </body>
