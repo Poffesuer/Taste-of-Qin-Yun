@@ -268,29 +268,30 @@ nav a:hover {
 /* Home page (index.php) — mobile */
 @media screen and (max-width: 768px) {
     .home-top img {
-        height: auto;
-        max-height: 40vh;
-        min-height: 12rem;
+        width: 100%;
+        margin-left: 0;
+        height: 50vh;
+        max-height: none;
         object-fit: cover;
     }
 
     .home-top h1 {
-        font-size: clamp(1.35rem, 5vw, 2rem);
-        padding: 12px 16px;
+        font-size: clamp(1.75rem, 5vw, 2.5rem);
+        padding: 15px 20px;
         margin-top: 0;
-        top: 7%;
-        width: calc(100% - 2rem);
-        max-width: 22rem;
+        top: 35%;
+        width: 90%;
+        max-width: none;
         justify-content: center;
     }
 
     .home-top h3 {
-        font-size: clamp(1rem, 4vw, 1.35rem);
-        padding: 10px 14px;
+        font-size: clamp(1.15rem, 4vw, 1.5rem);
+        padding: 15px 20px;
         margin-top: 0;
-        top: 13%;
-        width: calc(100% - 2rem);
-        max-width: 18rem;
+        top: 65%;
+        width: 90%;
+        max-width: none;
         justify-content: center;
     }
 
@@ -332,15 +333,17 @@ nav a:hover {
 
 @media screen and (max-width: 480px) {
     .home-top h1 {
-        top: 12%;
+        top: 30%;
+        font-size: clamp(1.35rem, 5vw, 2rem);
     }
 
     .home-top h3 {
-        top: 18%;
+        top: 65%;
+        font-size: clamp(1rem, 4vw, 1.35rem);
     }
 
     .home-top img {
-        max-height: 60vh;
+        height: 60vh;
     }
 }
 
