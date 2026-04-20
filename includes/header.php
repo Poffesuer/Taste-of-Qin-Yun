@@ -28,7 +28,6 @@ if (!empty($_SESSION['cart'])) {
         <div class="user-dropdown">
             <a class="dropbtn"><?php echo htmlspecialchars($_SESSION['username']); ?></a>
             <div class="dropdown-content">
-                <a href="<?php echo $base_url; ?>/login/dashboard.php">Dashboard</a>
                 <a href="<?php echo $base_url; ?>/login/logout.php">Logout</a>
             </div>
         </div>
