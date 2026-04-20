@@ -129,6 +129,16 @@ nav a:hover {
     z-index: 1;
 }
 
+.featured-heading {
+    text-align: center;
+    color: var(--primary);
+    font-size: 2.2rem;
+    margin-top: 5rem;
+    margin-bottom: -2rem;
+    /* Bridges heading with bottom grid visually */
+    font-weight: 600;
+}
+
 .display {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -1206,7 +1216,7 @@ nav a:hover {
 
 
 @media (max-width: 780px) {
-    
+
     .menu-row {
         display: flex;
         flex-direction: column;
