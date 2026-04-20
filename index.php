@@ -24,7 +24,7 @@ if (session_status() === PHP_SESSION_NONE) {
     <?php include 'includes/header.php'; ?>
 
     <section class="home-top">
-        <img src="images/cart.png" alt="background">
+        <img src="images/homepage.jpeg" class="backgroundimg">
         <h1>Taste Of Qinyun</h1>
 
         <section class="display">
