@@ -26,7 +26,6 @@ if (session_status() === PHP_SESSION_NONE) {
     <section class="home-top">
         <img src="images/homepage.jpeg" class="backgroundimg">
         <h1>Taste Of Qinyun</h1>
-        <h3>An authentic Xi'an culinary journey awaits you!</h3>
     </section>
 
     <h2 class="featured-heading">Featured Dishes</h2>
