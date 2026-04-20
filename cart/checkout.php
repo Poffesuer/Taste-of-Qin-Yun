@@ -42,7 +42,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $_SESSION['cart'] = [];
     $cart = [];
-    $success_message = "Thank you for your purchase! Your order has been placed successfully.";
+
+    // Redirect instantly to the generated receipt
+    header("Location: receipt.php?order_id=" . $order_id);
+    exit;
 }
 
 $prefill_email = $_SESSION['email'] ?? '';
