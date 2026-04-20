@@ -266,11 +266,7 @@ class CheckoutValidator {
             }
         });
 
-        if (this.isFormValid) {
-            this.purchaseBtn.removeAttribute('disabled');
-        } else {
-            this.purchaseBtn.setAttribute('disabled', 'disabled');
-        }
+        // The button natively always listens for clicks now to execute visual error validation smoothly.
     }
 
     handleSubmit(e) {
