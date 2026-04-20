@@ -7,7 +7,7 @@
 
 /* BRADEN CODE */
 
- :root {
+:root {
     --primary: #3ba057;
     --primary-dark: #308247;
     --background: #fafafa;
@@ -88,7 +88,7 @@ nav a:hover {
 .home-top img {
     width: 85%;
     height: auto;
-    margin-left:7.5%;
+    margin-left: 7.5%;
     display: block;
 }
 
@@ -784,10 +784,33 @@ nav a:hover {
         padding: 40px 0;
     }
 
-    #item-container,
-    #total-cost-container {
+    #item-container {
         width: 95%;
         padding: 15px;
+    }
+
+    #total-cost-container {
+        width: 95%;
+        padding: 25px 20px;
+        flex-wrap: wrap;
+    }
+
+    #total-cost-container .col:nth-child(1) {
+        width: 45%;
+        flex: none;
+    }
+
+    #total-cost-container .col:nth-child(2) {
+        width: 45%;
+        flex: none;
+        text-align: right;
+        align-items: flex-end;
+    }
+
+    #total-cost-container .col:nth-child(3) {
+        width: 100%;
+        margin-top: 15px;
+        flex: none;
     }
 
     .cart-item {
@@ -795,8 +818,8 @@ nav a:hover {
     }
 
     .cart-button.big {
-        font-size: 1.1em;
-        padding: 10px;
+        font-size: 1.2em;
+        padding: 12px;
     }
 }
 
