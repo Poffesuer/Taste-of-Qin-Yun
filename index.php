@@ -26,35 +26,36 @@ if (session_status() === PHP_SESSION_NONE) {
     <section class="home-top">
         <img src="images/homepage.jpeg" class="backgroundimg">
         <h1>Taste Of Qinyun</h1>
+        <h3>An authentic Xi'an culinary journey awaits you!</h3>
+    </section>
 
-        <section class="display">
+    <h2 class="featured-heading">Featured Dishes</h2>
+    <section class="display">
 
-            <h3>Featured Dishes</h3>
+        <section class="display-item">
+            <img src="images/menu/1.png" class="item" onerror="this.src='images/cart.png'">
+            <h2>Traditional Liangpi - $9.38</h2>
+            <p>Traditional Liangpi, a classic Chinese cold skin noodle dish.</p>
+        </section>
 
-            <section class="display-item">
-                <img src="images/menu/1.png" class="item" onerror="this.src='images/cart.png'">
-                <h2>Traditional Liangpi - $9.38</h2>
-                <p>Traditional Liangpi, a classic Chinese cold skin noodle dish.</p>
-            </section>
+        <section class="display-item">
+            <img src="images/menu/19.png" class="item" onerror="this.src='images/cart.png'">
+            <h2>Lamb Mo - $10.63</h2>
+            <p>Sizzling lamb meat brilliantly stuffed inside a traditional, crispy, warm Chinese flatbread bun wrapper.
+            </p>
+        </section>
 
-            <section class="display-item">
-                <img src="images/menu/19.png" class="item" onerror="this.src='images/cart.png'">
-                <h2>Lamb Mo - $10.63</h2>
-                <p>Sizzling lamb meat brilliantly stuffed inside a traditional, crispy, warm Chinese flatbread bun wrapper.</p>
-            </section>
+        <section class="display-item">
+            <img src="images/menu/18.png" class="item" onerror="this.src='images/cart.png'">
+            <h2>Pulled Pork Mo - $7.50</h2>
+            <p>Super tender pulled pork infused gracefully in a traditional sauce seamlessly served inside a fresh
+                bun.</p>
+        </section>
 
-            <section class="display-item">
-                <img src="images/menu/18.png" class="item" onerror="this.src='images/cart.png'">
-                <h2>Pulled Pork Mo - $7.50</h2>
-                <p>Super tender pulled pork infused gracefully in a traditional sauce seamlessly served inside a fresh
-                    bun.</p>
-            </section>
-
-            <section class="display-item">
-                <img src="images/menu/20.png" class="item" onerror="this.src='images/cart.png'">
-                <h2>Saucy Pork Mo - $8.75</h2>
-                <p>Flavorful saucy seared pork presented steaming heavily in a freshly baked Chinese Mo bun wrapper.</p>
-            </section>
+        <section class="display-item">
+            <img src="images/menu/20.png" class="item" onerror="this.src='images/cart.png'">
+            <h2>Saucy Pork Mo - $8.75</h2>
+            <p>Flavorful saucy seared pork presented steaming heavily in a freshly baked Chinese Mo bun wrapper.</p>
         </section>
     </section>
 
