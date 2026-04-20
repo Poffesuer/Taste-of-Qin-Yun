@@ -44,7 +44,7 @@ CREATE TABLE `login_details` (
 INSERT INTO `login_details` (`id`, `email`, `username`, `password`, `is_admin`, `created_at`, `updated_at`) VALUES
 (1, 'test@test.com', 'test', '$2y$10$3dZEFKARUeKb1Lr0Ndw8leyAzfRFMREvR8Jc2aK8XHjOMYLvvOE6i', 0, '2026-04-04 01:14:49', '2026-04-04 01:16:31'),
 (2, 'admin@restaurant.local', 'admin', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 1, '2026-04-04 01:14:49', NULL);
-//password: password
+-- password: password
 -- --------------------------------------------------------
 
 --

@@ -1,9 +1,11 @@
+<!--
+Name: Harry Kwok
+Date: April 1, 2026
+
+Connection to database.
+-->
+
 <?php
-/**
- * Authors: Harry, Hetarth, Braden, Leon, Uzair
- * Date: April 19
- * Description: Establishes a secure global, reusable PDO connection to the MySQL database backend.
- */
 
 try {
     $pdo = new PDO(
